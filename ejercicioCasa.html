@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nombre = "Veronica";
+        let apellido = "Garcia";
+        let curso = "Desarrollo de aplicaciones web";
+
+        let datos = nombre.concat(" "+apellido+" "+curso);
+        let datosMayusculas = datos.toUpperCase(datos);
+        console.log(datosMayusculas);
+        console.log(datos);
+
+        //muestro el numero de caracteres del curso
+        console.log(curso.length);
+        //numero de caracteres de nombre
+        console.log(nombre.length);
+
+
+        console.log("El caracter en la posicion 5 es: "+curso.charAt(5));
+        console.log("El primer caracter 'A' se encuentra en la posicion: "+curso.indexOf("a"));
+        console.log("El ultimo caracter 'A' se encuentra en la posicion: "+curso.lastIndexOf("a"));
+
+        // para saber si en la cadena se incluye la palabra que especificamos.
+        if (curso.includes("aplicaciones")){
+            console.log("Estas en un curso de APLICACIONES");
+        }else{
+            console.log("Especifica el curso");
+        }
+
+        if(nombre.startsWith("V")){
+            console.log("Su nombre empieza correctamente");
+        }else{
+            console.log("Primera letra incorrecta");
+        }
+
+        //Extraer los 10 pprimeros caracteres de curso.
+        console.log(curso.slice(0,10));
+        console.log(curso.substring(0,10));// hasta la posicion 10
+        console.log(curso.substr(0,10));// extrae el numero de caracteres que le pasamos
+
+        // split para separar en array
+        let arrayDatos = []
+        arrayDatos = datos.split(" ");
+        console.log(arrayDatos);
+        console.log(datos.split("Desarrollo de ",5));
+        
+        console.log("Repitiendo el nombre: "+ nombre.repeat(3)+" ");
+        //repetimos pero poniendo un espacio
+        console.log("Repitiendo el nombre: "+ (nombre+" ").repeat(3));
+
+        let frase = "   Estoy aprendiendo JavaScript   ";
+        console.log(frase);
+        console.log(frase.trim());
+
+
+    </script>
+</body>
+</html>
